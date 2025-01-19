@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ffdd57;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        h1,
+        p {
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .skill {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .skill:hover {
+            background-color: #444;
+        }
+        
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <a href="Untitled-1.html">Home</a>
+            <a href="Untitled-3.html">Projects</a>
+            <a href="Untitled-4.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Who Am I?</h2>
+        <p>I am a passionate 11th-grade student studying in the Pearson BTEC system. I love technology, problem-solving, and kickboxing!</p>
+        <h3>My Skills:</h3>
+        <div class="skills">
+            <div class="skill" onclick="toggleContent('coding')">Coding</div>
+            <div class="skill" onclick="toggleContent('ai')">AI Pro User</div>
+            <div class="skill" onclick="toggleContent('problem')">Problem Solving</div>
+            <div class="skill" onclick="toggleContent('kickboxing')">Kickboxing</div>
+        </div>
+        <div id="coding" class="hidden-content">
+            <h3>Coding</h3>
+            <p>I enjoy building websites, solving coding challenges, and exploring new programming languages.</p>
+        </div>
+        <div id="ai" class="hidden-content">
+            <h3>AI Pro User</h3>
+            <p>I have experience using AI tools to streamline projects, solve problems, and create innovative solutions.</p>
+        </div>
+        <div id="problem" class="hidden-content">
+            <h3>Problem Solving</h3>
+            <p>Whether it’s a technical issue or a real-life challenge, I love finding efficient and creative solutions.</p>
+        </div>
+        <div id="kickboxing" class="hidden-content">
+            <h3>Kickboxing</h3>
+            <p>Kickboxing is my favorite sport. It has taught me discipline, focus, and the importance of resilience.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 - All Rights Reserved</p>
+    </footer>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            const allContents = document.querySelectorAll('.hidden-content');
+            allContents.forEach(div => {
+                if (div !== content) div.style.display = 'none';
+            });
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
